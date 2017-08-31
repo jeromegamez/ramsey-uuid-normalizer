@@ -14,4 +14,4 @@ env:
 before_script:
   - composer update --prefer-source $PREFER_LOWEST
 
-script: $COMPOSER_BIN_DIR/phpunit --coverage-text
+script: vendor/bin/phpunit --coverage-text

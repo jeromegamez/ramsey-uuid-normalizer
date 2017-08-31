@@ -7,4 +7,5 @@
 
 /tests export-ignore
 
+/example.php export-ignore
 /phpunit.xml.dist export-ignore

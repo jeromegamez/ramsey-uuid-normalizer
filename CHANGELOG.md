@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Dropped support for unmaintained Symfony versions
+
 ## 1.2 - 2019-12-29
 
 Support for Symfony 5 and PHP 7.4

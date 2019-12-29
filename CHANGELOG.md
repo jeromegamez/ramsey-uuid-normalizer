@@ -1,9 +1,13 @@
 # Changelog
 
-## 1.1
+## 1.2 - 2019-12-29
+
+Support for Symfony 5 and PHP 7.4
+
+## 1.1 - 2019-01-09
 
 Support for Symfony 4, PHP 7.2 and PHP 7.3
 
-## 1.0
+## 1.0 - 2017-08-31
 
 Initial release

@@ -19,8 +19,13 @@
         "symfony/property-access": "3.4.*|^4.3|^5.0"
     },
     "autoload": {
-        "files": [
-            "UuidNormalizer.php"
-        ]
+        "psr-4": {
+            "Gamez\\Symfony\\Component\\Serializer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gamez\\Symfony\\Component\\Serializer\\": "tests"
+        }
     }
 }

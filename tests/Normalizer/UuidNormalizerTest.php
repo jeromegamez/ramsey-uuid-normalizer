@@ -1,6 +1,6 @@
 <?php
 
-namespace Gamez\Symfony\Component\Serializer\Normalizer\Tests;
+namespace Gamez\Symfony\Component\Serializer\Normalizer;
 
 use Gamez\Symfony\Component\Serializer\Normalizer\UuidNormalizer;
 use PHPUnit\Framework\TestCase;

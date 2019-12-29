@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Dropped support for unmaintained Symfony versions
+* Dropped support for unmaintained PHP versions
 
 ## 1.2 - 2019-12-29
 

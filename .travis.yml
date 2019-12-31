@@ -1,8 +1,25 @@
 language: php
 
-php:
-  - 7.2
-  - 7.3
-  - 7.4
+matrix:
+  include:
+  - php: 7.2
+  - php: 7.3
+  - php: 7.4
+  - php: 7.2
+    install: travis_retry composer update -n --prefer-lowest --prefer-stable --prefer-dist
+  - php: 7.4
+    before_script: travis_retry composer require "symfony/serializer:3.4.*"
+  - php: 7.4
+    before_script: travis_retry composer require "symfony/serializer:4.3.*"
+  - php: 7.4
+    before_script: travis_retry composer require "symfony/serializer:4.4.*"
 
-install: composer install
+before_install:
+  - travis_retry composer self-update
+
+install:
+  - travis_retry composer update -n --prefer-stable --prefer-dist
+
+script:
+  - composer validate --strict --no-check-lock
+  - vendor/bin/phpunit $PHPUNIT_FLAGS

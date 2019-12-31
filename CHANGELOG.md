@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.0 - 2019-12-31
 
 * Dropped support for unmaintained Symfony versions
 * Dropped support for unmaintained PHP versions

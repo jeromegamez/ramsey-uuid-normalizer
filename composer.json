@@ -27,5 +27,11 @@
         "psr-4": {
             "Gamez\\Symfony\\Component\\Serializer\\": "tests"
         }
-    }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/jeromegamez"
+        }
+    ]
 }

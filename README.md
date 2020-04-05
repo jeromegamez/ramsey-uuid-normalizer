@@ -3,6 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/gamez/ramsey-uuid-normalizer/v/stable)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
 [![Total Downloads](https://poser.pugx.org/gamez/ramsey-uuid-normalizer/downloads)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
 [![Build Status](https://travis-ci.org/jeromegamez/ramsey-uuid-normalizer.svg?branch=master)](https://travis-ci.org/jeromegamez/ramsey-uuid-normalizer)
+[![Sponsor](https://img.shields.io/static/v1?logo=GitHub&label=Sponsor&message=%E2%9D%A4&color=ff69b4)](https://github.com/sponsors/jeromegamez)
 
 ## Installation
 

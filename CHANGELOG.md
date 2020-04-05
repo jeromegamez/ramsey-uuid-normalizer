@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Added support for `ramsey/uuid ^4.0`
+
 ## 2.0 - 2019-12-31
 
 * Dropped support for unmaintained Symfony versions

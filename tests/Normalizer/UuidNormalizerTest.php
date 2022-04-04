@@ -9,11 +9,8 @@ use Ramsey\Uuid\UuidInterface;
 
 class UuidNormalizerTest extends TestCase
 {
-    /** @var UuidNormalizer */
-    private $normalizer;
-
-    /** @var Uuid */
-    private $uuid;
+    private UuidNormalizer $normalizer;
+    private UuidInterface $uuid;
 
     protected function setUp(): void
     {
@@ -35,7 +32,6 @@ class UuidNormalizerTest extends TestCase
         $this->assertTrue($this->normalizer->supportsDenormalization($this->uuid->toString(), UuidInterface::class));
 
         $result = $this->normalizer->denormalize($this->uuid->toString(), Uuid::class);
-        $this->assertInstanceOf(UuidInterface::class, $result);
         $this->assertTrue($this->uuid->equals($result));
     }
 }

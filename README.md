@@ -1,8 +1,11 @@
 # Symfony Normalizer and Denormalizer for [ramsey/uuid](https://github.com/ramsey/uuid)
 
-[![Latest Stable Version](https://poser.pugx.org/gamez/ramsey-uuid-normalizer/v/stable)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
-[![Total Downloads](https://poser.pugx.org/gamez/ramsey-uuid-normalizer/downloads)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
-[![Build Status](https://travis-ci.org/jeromegamez/ramsey-uuid-normalizer.svg?branch=master)](https://travis-ci.org/jeromegamez/ramsey-uuid-normalizer)
+[![Current version](https://img.shields.io/packagist/v/gamez/ramsey-uuid-normalizer.svg?logo=composer)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
+[![Supported PHP version](https://img.shields.io/static/v1?logo=php&label=PHP&message=%5E8.0&color=777bb4)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/gamez/ramsey-uuid-normalizer.svg)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
+[![Total Downloads](https://img.shields.io/packagist/dt/gamez/ramsey-uuid-normalizer.svg)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
+[![Tests](https://github.com/jeromegamez/ramsey-uuid-normalizer/workflows/Tests/badge.svg)](https://github.com/gamez/ramsey-uuid-normalizer/actions)
+[![Discord](https://img.shields.io/discord/807679292573220925.svg?color=7289da&logo=discord)](https://discord.gg/Yacm7unBsr)
 [![Sponsor](https://img.shields.io/static/v1?logo=GitHub&label=Sponsor&message=%E2%9D%A4&color=ff69b4)](https://github.com/sponsors/jeromegamez)
 
 ## Installation

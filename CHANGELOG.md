@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+* Dropped support for PHP <8.0
+* Dropped support for `ramsey/uuid` <4.3.1
+* Dropped support for Symfony <6.0
+* Added support for Symfony ^6.0
+
 ## 2.1.0 - 2020-04-05
 
 * Added support for `ramsey/uuid ^4.0`

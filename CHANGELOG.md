@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.0.0 - 2022-04-05
 
 * Dropped support for PHP <8.0
 * Dropped support for `ramsey/uuid` <4.3.1

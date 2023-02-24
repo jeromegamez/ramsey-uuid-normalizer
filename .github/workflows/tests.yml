@@ -9,13 +9,14 @@ on:
 jobs:
   tests:
     name: PHP ${{ matrix.php }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         php:
           - "8.0"
           - "8.1"
+          - "8.2"
 
     env:
       extensions: ctype, dom, intl, json, mbstring, openssl, xml, zip, zlib

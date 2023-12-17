@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+* Added support for PHP 8.3
+* Dropped support for PHP 8.0
+
 ## 3.0.0 - 2022-04-05
 
 * Dropped support for PHP <8.0

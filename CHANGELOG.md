@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.1.0 - 2023-12-17
+
 * Added support for PHP 8.3
 * Dropped support for PHP 8.0
 * Added support for Symfony 7

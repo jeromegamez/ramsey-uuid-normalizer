@@ -42,5 +42,14 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "analyze": "@analyse",
+        "test": "vendor/bin/phpunit --testdox",
+        "test-coverage": [
+            "Composer\\Config::disableProcessTimeout",
+            "XDEBUG_MODE=coverage vendor/bin/phpunit --testdox --coverage-html=.build/coverage"
+        ]
     }
 }

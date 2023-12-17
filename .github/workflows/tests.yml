@@ -8,59 +8,42 @@ on:
 
 jobs:
   tests:
-    name: PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.php }}, Symfony ${{ matrix.symfony }}
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         php:
-          - "8.1"
           - "8.2"
           - "8.3"
-
-    env:
-      extensions: ctype, dom, intl, json, mbstring, openssl, xml, zip, zlib
-      key: cache-v1 # can be any string, change to clear the extension cache.
+        symfony:
+          - "^6.4"
+          - "^7.0"
+        include:
+          - php: "8.1"
+            symfony: "^6.4"
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Setup cache environment
-        id: extcache
-        uses: shivammathur/cache-extensions@v1
-        with:
-          php-version: ${{ matrix.php }}
-          extensions: ${{ env.extensions }}
-          key: ${{ env.key }}
-
-      - name: Cache extensions
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.extcache.outputs.dir }}
-          key: ${{ steps.extcache.outputs.key }}
-          restore-keys: ${{ steps.extcache.outputs.key }}
-
-      - name: Setup PHP
+      - name: Setup PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: ${{ env.extensions }}
-          tools: composer, pecl
           coverage: xdebug
         env:
           COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: "ramsey/composer-install@v2"
+      - name: Install composer requirements
+        run: composer require -W "symfony/serializer:${{ matrix.symfony }}"
 
-      - name: Setup problem matchers for PHP
-        run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+      - name: Setup Problem Matchers
+        run: |
+          echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+          echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Run PHPStan
         run: vendor/bin/phpstan
-
-      - name: Setup Problem Matchers for PHPUnit
-        run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit --testdox --coverage-text

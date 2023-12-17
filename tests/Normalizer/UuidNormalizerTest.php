@@ -2,10 +2,10 @@
 
 namespace Gamez\Symfony\Component\Serializer\Normalizer;
 
-use Gamez\Symfony\Component\Serializer\Normalizer\UuidNormalizer;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
+use Symfony\Component\Serializer\Exception\UnexpectedValueException;
 
 class UuidNormalizerTest extends TestCase
 {
@@ -33,5 +33,20 @@ class UuidNormalizerTest extends TestCase
 
         $result = $this->normalizer->denormalize($this->uuid->toString(), Uuid::class);
         $this->assertTrue($this->uuid->equals($result));
+    }
+
+    /** @test */
+    public function it_supports_types(): void
+    {
+        $types = $this->normalizer->getSupportedTypes(null);
+
+        $this->assertArrayHasKey(UuidInterface::class, $types);
+    }
+
+    /** @test */
+    public function it_rejects_unsupported_data_when_denormalizing(): void
+    {
+        $this->expectException(UnexpectedValueException::class);
+        $this->normalizer->denormalize(1, UuidInterface::class);
     }
 }

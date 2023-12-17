@@ -4,6 +4,8 @@
 
 * Added support for PHP 8.3
 * Dropped support for PHP 8.0
+* Added support for Symfony 7
+* Dropped support for Symfony <6.4
 
 ## 3.0.0 - 2022-04-05
 

@@ -13,7 +13,7 @@ class UuidNormalizer implements NormalizerInterface, DenormalizerInterface
     /**
      * @param array<string, mixed> $context
      */
-    public function denormalize(mixed $data, string $type, string $format = null, array $context = []): UuidInterface
+    public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): UuidInterface
     {
         if (!is_string($data)) {
             throw NotNormalizableValueException::createForUnexpectedDataType(sprintf('The data is not a valid "%s" string representation.', $type), $data, ['string']);
@@ -24,7 +24,7 @@ class UuidNormalizer implements NormalizerInterface, DenormalizerInterface
     /**
      * @param array<string, mixed> $context
      */
-    public function supportsDenormalization(mixed $data, string $type, string $format = null, array $context = []): bool
+    public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
         return is_string($data) && is_a($type, UuidInterface::class, true) && Uuid::isValid($data);
     }
@@ -33,7 +33,7 @@ class UuidNormalizer implements NormalizerInterface, DenormalizerInterface
      * @param UuidInterface $object
      * @param array<string, mixed> $context
      */
-    public function normalize(mixed $object, string $format = null, array $context = []): string
+    public function normalize(mixed $object, ?string $format = null, array $context = []): string
     {
         return $object->toString();
     }
@@ -41,7 +41,7 @@ class UuidNormalizer implements NormalizerInterface, DenormalizerInterface
     /**
      * @param array<string, mixed> $context
      */
-    public function supportsNormalization(mixed $data, string $format = null, array $context = []): bool
+    public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
         return $data instanceof UuidInterface;
     }

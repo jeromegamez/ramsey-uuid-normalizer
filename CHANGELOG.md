@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.2.0 - 2026-02-14
+
+* Added support for PHP 8.5
+* Added support for Symfony 8
+
 ## 3.2.0 - 2025-02-04
 
 * Added support for PHP 8.4

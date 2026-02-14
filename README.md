@@ -1,7 +1,6 @@
 # Symfony Normalizer and Denormalizer for [ramsey/uuid](https://github.com/ramsey/uuid)
 
 [![Current version](https://img.shields.io/packagist/v/gamez/ramsey-uuid-normalizer.svg?logo=composer)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
-[![Supported PHP version](https://img.shields.io/static/v1?logo=php&label=PHP&message=%5E8.0&color=777bb4)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/gamez/ramsey-uuid-normalizer.svg)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
 [![Total Downloads](https://img.shields.io/packagist/dt/gamez/ramsey-uuid-normalizer.svg)](https://packagist.org/packages/gamez/ramsey-uuid-normalizer/stats)
 [![Tests](https://github.com/jeromegamez/ramsey-uuid-normalizer/workflows/Tests/badge.svg)](https://github.com/jeromegamez/ramsey-uuid-normalizer/actions)

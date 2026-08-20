@@ -40,6 +40,9 @@ jobs:
             symfony: "^8.0.5"
           - php: "8.5"
             symfony: "^8.0.5"
+          - php: "8.6"
+            symfony: "^8.0.5"
+            composer-options: "--ignore-platform-req=php+"
 
     steps:
       - uses: actions/checkout@v4
@@ -53,7 +56,7 @@ jobs:
           COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install composer requirements
-        run: composer require -W "symfony/serializer:${{ matrix.symfony }}"
+        run: composer require -W "symfony/serializer:${{ matrix.symfony }}" ${{ matrix.composer-options }}
 
       - name: Setup Problem Matchers
         run: |
